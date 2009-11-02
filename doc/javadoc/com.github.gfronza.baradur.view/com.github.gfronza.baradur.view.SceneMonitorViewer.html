@@ -1,0 +1,403 @@
+
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../general.css" rel="stylesheet">
+<style type="text/css"></style>
+<link href="../sdk.css" rel="stylesheet">
+<script type="text/javascript" src="../mootools-1.2.1-yui.js"></script><script type="text/javascript" src="../sessvars.js"></script><script type="text/javascript" src="../sdk.js"></script>
+<meta name="collection" content="api">
+<meta name="keywords" content="JavaFX, Java FX">
+<title>JavaFX 1.2.1 API | com.github.gfronza.baradur.view.SceneMonitorViewer | Java FX</title>
+</head>
+<body>
+<div id="top-header">
+<h1>
+<a href="../index.html">Java<b>FX</b>: <i>Bringing Rich Experiences To All the Screens Of Your Life</i></a>
+</h1>
+<h3 id="master-index-link">
+<a href="../master-index.html">master index</a>
+</h3>
+<h3 id="profile-switcher">Profile: <a href="#" id="select-desktop-profile">desktop</a>, <a href="#" id="select-common-profile">common</a>
+</h3>
+</div>
+<ul id="classes-toc">
+<li>
+<h4 class="header">
+<a href="#">com.github.gfronza.baradur</a>
+</h4>
+<ul class="content">
+<li class="">
+<a href="../com.github.gfronza.baradur/com.github.gfronza.baradur.Baradur.html">Baradur</a>
+</li>
+</ul>
+</li>
+<li>
+<h4 class="header">
+<a href="#">com.github.gfronza.baradur.control</a>
+</h4>
+<ul class="content">
+<li class="">
+<a href="../com.github.gfronza.baradur.control/com.github.gfronza.baradur.control.NodeHighlighting.html">NodeHighlighting</a>
+</li>
+</ul>
+</li>
+<li>
+<h4 class="header">
+<a href="#">com.github.gfronza.baradur.view</a>
+</h4>
+<ul class="content">
+<li class="">
+<a href="../com.github.gfronza.baradur.view/com.github.gfronza.baradur.view.NodeViewRepresentation.html">NodeViewRepresentation</a>
+</li>
+<li class=" selected-class">
+<a href="../com.github.gfronza.baradur.view/com.github.gfronza.baradur.view.SceneMonitorViewer.html">SceneMonitorViewer</a>
+</li>
+</ul>
+</li>
+<li id="copyright">
+<i>Copyright 2008-2009</i>
+<br>
+<i>Sun Microsystems, Inc.</i>
+<br>
+<i>Use is subject to <a href="http://java.sun.com/javafx/1.2/docs/api/license.html">license terms</a>.</i>
+<br>
+</li>
+</ul>
+<div id="content">
+<div id="nav">
+<h1 class="classname">
+<i class="modifiers">public</i>
+                class
+                <a class="classname"><strong>com.github.gfronza.baradur.view.</strong><b>SceneMonitorViewer</b></a>
+</h1>
+<h2>
+<span class="descriptive">Inherits from: </span><a title="com.sun.javafx.runtime.FXBase"><strong>com.sun.javafx.runtime.</strong><b>FXBase</b></a>
+            &gt;
+            <a title="com.github.gfronza.baradur.view.SceneMonitorViewer" href="../com.github.gfronza.baradur.view/com.github.gfronza.baradur.view.SceneMonitorViewer.html"><strong>com.github.gfronza.baradur.view.</strong><b>SceneMonitorViewer</b></a> 
+</h2>
+<h2>
+<span class="descriptive">Known subclasses: </span>
+</h2>
+<ul id="tabs">
+<li>Jump to Section:</li>
+<li>
+<a href="#overview">overview</a>
+</li>
+<li>
+<a href="#fields-summary">variables</a>
+</li>
+<li>
+<a href="#methods-summary">functions</a>
+</li>
+</ul>
+</div>
+<a id="overview">
+<h3>Overview</h3>
+</a>
+<div class="overview">
+<p class="comment">This JavaFX class represents the viewer of the Baradur Tool.
+ This viewer shows a Stage with the scene graph visualization based on the
+ registered nodes.</p>
+</div>
+<div id="toc">
+<a id="fields-summary">
+<h3>Script Variable Summary</h3>
+</a>
+<table class="fields-summary fields">
+<tr>
+<th class="access">access</th><th class="name">name</th><th class="type">type</th><th><a class="tooltip" title="Indicates the variable can be read">Can Read</a></th><th><a title="Indicates the variable can only be set in the Object initializer. Any further changes will be ignored." class="tooltip">Can Init</a></th><th><a title="Indicates the varible can set at any time." class="tooltip">Can Write</a></th><th><a title="Indicates the default value of this variable" class="tooltip">Default Value</a></th><th class="description">description</th>
+</tr>
+<tr class="var ">
+<td class="access"></td><td class="name"><a name="__DIR__"></a><b class="name">__DIR__</b></td><td class="type"><a><i class="type">String</i></a></td><td class="canread"></td><td class="caninit"></td><td class="canwrite"></td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access"></td><td class="name"><a name="__FILE__"></a><b class="name">__FILE__</b></td><td class="type"><a><i class="type">String</i></a></td><td class="canread"></td><td class="caninit"></td><td class="canwrite"></td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+</table>
+<a id="fields-summary">
+<h3>Variable Summary</h3>
+</a>
+<table class="fields-summary fields">
+<tr>
+<th class="access">access</th><th class="name">name</th><th class="type">type</th><th><a class="tooltip" title="Indicates the variable can be read">Can Read</a></th><th><a title="Indicates the variable can only be set in the Object initializer. Any further changes will be ignored." class="tooltip">Can Init</a></th><th><a title="Indicates the varible can set at any time." class="tooltip">Can Write</a></th><th><a title="Indicates the default value of this variable" class="tooltip">Default Value</a></th><th class="description">description</th>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="FXBASE_CLASSNAME"></a><b class="name">FXBASE_CLASSNAME</b></td><td class="type"><a><i class="type">String</i></a></td><td class="canread">subclass</td><td class="caninit"></td><td class="canwrite"></td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="model"></a><b class="name">model</b></td><td class="type"><a><i class="type">PropertyTableModel</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">public-init</td><td class="name"><a name="nodeHighlighting"></a><b class="name">nodeHighlighting</b></td><td class="type"><a href="../com.github.gfronza.baradur.control/com.github.gfronza.baradur.control.NodeHighlighting.html"><i class="type">NodeHighlighting</i></a></td><td class="canread"><img src="..//images/JFX_highlight_dot.png"></td><td class="caninit"><img src="..//images/JFX_highlight_dot.png"></td><td class="canwrite"></td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="registeredNodes"></a><b class="name">registeredNodes</b></td><td class="type"><a><i class="type">Byte[]</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description">
+<p class="comment">All nodes registered in the tool.</p>
+</td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="registeredNodesComboBox"></a><b class="name">registeredNodesComboBox</b></td><td class="type"><a><i class="type">SwingComboBox</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="registeredNodesName"></a><b class="name">registeredNodesName</b></td><td class="type"><a><i class="type">String[]</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="stage"></a><b class="name">stage</b></td><td class="type"><a><i class="type">Stage</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="table"></a><b class="name">table</b></td><td class="type"><a><i class="type">PropertyTable</i></a></td><td class="canread">subclass</td><td class="caninit">subclass</td><td class="canwrite">subclass</td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+<tr class="var ">
+<td class="access">protected</td><td class="name"><a name="treeNodes"></a><b class="name">treeNodes</b></td><td class="type"><a><i class="type">JTree</i></a></td><td class="canread">subclass</td><td class="caninit"></td><td class="canwrite"></td><td class="defaultvalue"></td><td class="description"></td>
+</tr>
+</table>
+<h3>Inherited Variables</h3>
+<a id="methods-summary">
+<h3>Function Summary</h3>
+</a>
+<dl class="methods-summary">
+<a id="addPropertySession(Node,javafx.reflect.FXClassType,java.lang.String)"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>addPropertySession</b>(<i class="parameters"><b>node</b>:
+                    
+                    <a><i>Node</i></a>, <b>fxClass</b>:
+                    
+                    <a><i>javafx.reflect.FXClassType</i></a>, <b>simpleClassName</b>:
+                    
+                    <a><i>java.lang.String</i></a></i>)
+            :
+            
+            <a><i>PropertyTable.updateUI</i></a>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="parameters">
+                    Parameters
+                    <dt>node</dt>
+<dd></dd>
+<dt>fxClass</dt>
+<dd></dd>
+<dt>simpleClassName</dt>
+<dd></dd>
+</dl>
+<dl class="returns">
+                    Returns
+                    <dt>PropertyTable.updateUI</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="addTreeNodesSelectionListener()"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>addTreeNodesSelectionListener</b>(<i class="parameters"></i>)
+            :
+            
+            <i>Void</i>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="createPanelProperties()"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>createPanelProperties</b>(<i class="parameters"></i>)
+            :
+            
+            <a><i>SwingComponent</i></a>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="returns">
+                    Returns
+                    <dt>SwingComponent</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="createTreeNodes()"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>createTreeNodes</b>(<i class="parameters"></i>)
+            :
+            
+            <a><i>SwingComponent</i></a>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="returns">
+                    Returns
+                    <dt>SwingComponent</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="getComboBoxItems(Byte[])"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>getComboBoxItems</b>(<i class="parameters"><b>registeredNodes</b>:
+                    
+                    <a><i>Byte</i></a>[]</i>)
+            :
+            
+            <a><i>java.lang.Object[]</i></a>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="parameters">
+                    Parameters
+                    <dt>registeredNodes</dt>
+<dd></dd>
+</dl>
+<dl class="returns">
+                    Returns
+                    <dt>Object[]</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="populateNodeProperties(Node)"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>populateNodeProperties</b>(<i class="parameters"><b>node</b>:
+                    
+                    <a><i>Node</i></a></i>)
+            :
+            
+            <i>Void</i>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="parameters">
+                    Parameters
+                    <dt>node</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="registerNode(Node,java.lang.String)"></a>
+<dt class="method ">
+<i class="modifiers">public</i> <b>registerNode</b>(<i class="parameters"><b>node</b>:
+                    
+                    <a><i>Node</i></a>, <b>name</b>:
+                    
+                    <a><i>java.lang.String</i></a></i>)
+            :
+            
+            <i>Void</i>
+</dt>
+<dd class="method ">
+<div>
+<p class="comment">Register the nodes in the viewer.</p>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<p class="comment">Register the nodes in the viewer.</p>
+<dl class="parameters">
+                    Parameters
+                    <dt>node</dt>
+<dd></dd>
+<dt>name</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="show(java.lang.Boolean)"></a>
+<dt class="method ">
+<i class="modifiers">public</i> <b>show</b>(<i class="parameters"><b>arg0</b>:
+                    
+                    <a><i>java.lang.Boolean</i></a></i>)
+            :
+            
+            <a><i>&lt;any?&gt;</i></a>
+</dt>
+<dd class="method ">
+<div>
+<p class="comment">Shows the viewer of Baradur Tool.</p>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<p class="comment">Shows the viewer of Baradur Tool.</p>
+<dl class="parameters">
+                    Parameters
+                    <dt>arg0</dt>
+<dd></dd>
+</dl>
+<dl class="returns">
+                    Returns
+                    <dt>&lt;any?&gt;</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="treatChildNode(javax.swing.tree.DefaultMutableTreeNode,Node)"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>treatChildNode</b>(<i class="parameters"><b>arg0</b>:
+                    
+                    <a><i>javax.swing.tree.DefaultMutableTreeNode</i></a>, <b>arg1</b>:
+                    
+                    <a><i>Node</i></a></i>)
+            :
+            
+            <i>Void</i>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+<dl class="parameters">
+                    Parameters
+                    <dt>arg0</dt>
+<dd></dd>
+<dt>arg1</dt>
+<dd></dd>
+</dl>
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+<a id="updateSceneGraphAction()"></a>
+<dt class="method ">
+<i class="modifiers">protected</i> <b>updateSceneGraphAction</b>(<i class="parameters"></i>)
+            :
+            
+            <i>Void</i>
+</dt>
+<dd class="method ">
+<div>
+<a href="#" class="long-desc-open"><img src="../images/JFX_arrow_right.png"></a>
+<div class="long-desc">
+                            &amp;nbsp;
+                        </div>
+</div>
+</dd>
+</dl>
+<h3>Inherited Functions</h3>
+</div>
+</div>
+</body>
+</html>

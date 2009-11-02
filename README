@@ -1,0 +1,16 @@
+Baradur is a scene graph viewer for JavaFX applications.
+First release: 2009-11-02.
+Baradur is distributed under GPL (see file LICENSE).
+
+Requirements to run this application:
+ - Java SE 1.5 it's available at http://java.sun.com
+ - JavaFX 1.2 it's available at  http://javafx.com/
+ - Apache ant it's available at http://ant.apache.org/
+
+For more information, please read the documentation that can
+be found in doc/index.html.
+
+Thank you!
+
+--
+Germano Fronza
