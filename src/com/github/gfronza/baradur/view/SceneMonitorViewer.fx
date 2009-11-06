@@ -19,43 +19,46 @@
  */
 package com.github.gfronza.baradur.view;
 
-import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.ext.swing.SwingComboBoxItem;
 import javax.swing.JTree;
-import javafx.ext.swing.SwingComponent;
 import javafx.ext.swing.SwingComboBox;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javax.swing.tree.DefaultMutableTreeNode;
 import javafx.util.Sequences;
 import javafx.scene.Group;
 import com.acarter.propertytable.PropertyTable;
 import com.acarter.propertytable.PropertyTableModel;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.event.TreeSelectionListener;
+import com.github.gfronza.baradur.control.NodeHighlighting;
+import javafx.ext.swing.SwingComponent;
+import javafx.ext.swing.SwingScrollPane;
+import javafx.reflect.FXClassType;
+import javafx.reflect.FXContext;
+import javafx.scene.CustomNode;
+import javafx.scene.Node;
+import javafx.stage.Alert;
+import com.acarter.propertytable.Property;
+import com.acarter.propertytable.PropertySection;
+import com.acarter.propertytable.PropertySectionState;
+import com.github.gfronza.baradur.view.NodeViewRepresentation;
 import java.lang.Boolean;
+import java.lang.Class;
+import java.lang.NoSuchMethodException;
+import java.lang.Object;
 import java.lang.String;
+import java.lang.Void;
+import java.lang.reflect.Method;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.event.TreeSelectionListener;
 import javax.swing.event.TreeSelectionEvent;
-import com.github.gfronza.baradur.control.NodeHighlighting;
-import com.github.gfronza.baradur.view.NodeViewRepresentation;
-import javafx.ext.swing.SwingScrollPane;
-import com.acarter.propertytable.PropertySection;
-import com.acarter.propertytable.PropertySectionState;
-import java.lang.Class;
-import javafx.reflect.FXClassType;
-import javafx.reflect.FXContext;
-import java.lang.NoSuchMethodException;
-import java.lang.reflect.Method;
-import com.acarter.propertytable.Property;
-import javafx.stage.Alert;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 
 /**
@@ -167,7 +170,7 @@ public class SceneMonitorViewer {
 
         var fxClass = FXContext.getInstance().findClass(node.getClass().getCanonicalName());
         addPropertySession(node, fxClass, node.getClass().getSimpleName());
-
+        
         var c: Class = node.getClass().getSuperclass();
         while (not c.getName().equals(FXBASE_CLASSNAME)) {
             fxClass = FXContext.getInstance().findClass(c.getCanonicalName());
@@ -287,6 +290,9 @@ public class SceneMonitorViewer {
             for (n in (node as Group).content) {
                 treatChildNode(newTreeNode, n);
             }
+        }
+        else if (node instanceof CustomNode){
+            treatChildNode(newTreeNode, (node as CustomNode).impl_content);
         }
     }
 }

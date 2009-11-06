@@ -20,12 +20,13 @@
 package com.github.gfronza.baradur.control;
 
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.scene.CustomNode;
+import javafx.scene.Node;
 
 /**
  * Implementation of the node highlighting feature.
@@ -53,6 +54,9 @@ public class NodeHighlighting {
                 registerNode(n);
             }
         }
+        else if (node instanceof CustomNode) {
+            registerNode((node as CustomNode).impl_content);
+        }
     }
 
     /**
@@ -74,7 +78,7 @@ public class NodeHighlighting {
      */
     public function highlightNode(node: Node) {
         def boundingBoxRect = getBoundingBoxRectangle(node);
-        insert boundingBoxRect into (node.parent as Group).content;
+        insert boundingBoxRect into findParentGroup(node.parent).content;
         insert boundingBoxRect into boundingRects;
         
         Timeline {
@@ -106,7 +110,7 @@ public class NodeHighlighting {
                 KeyFrame {
                     time: 1s
                     action: function() {
-                        delete boundingBoxRect from (node.parent as Group).content;
+                        delete boundingBoxRect from findParentGroup(node.parent).content;
                         delete boundingBoxRect from boundingRects;
                     }
                 }
@@ -141,12 +145,16 @@ public class NodeHighlighting {
 
         // event wrapper.
         node.onMouseEntered = function(e:MouseEvent) : Void {
+                
             // triggers the original function
             originalMouseEnteredFunction(e);
 
             if (highlightingEnabled) {
                 boundingBoxRect = getBoundingBoxRectangle(node);
-                insert boundingBoxRect into (node.parent as Group).content;
+
+                def parentGroup: Group = findParentGroup(node.parent);
+                println(parentGroup);
+                insert boundingBoxRect into parentGroup.content;
             }
         };
 
@@ -155,9 +163,27 @@ public class NodeHighlighting {
             originalMouseExitedFunction(e);
 
             if (highlightingEnabled) {
-                delete boundingBoxRect from (node.parent as Group).content;
+                def parentGroup: Group = findParentGroup(node.parent);
+                delete boundingBoxRect from parentGroup.content;
             }
         };
+    }
+
+    protected function findParentGroup(node: Node) : Group {
+        var group: Group;
+
+        if (node instanceof Group) {
+            return node as Group;
+        }
+        else if (node instanceof CustomNode) {
+            return findParentGroup((node as CustomNode).impl_content);
+        }
+        else {
+            if (node.parent != null) {
+                return findParentGroup(node.parent);
+            }
+            return null;
+        }
     }
 
     protected function getBoundingBoxRectangle(node: Node) : Rectangle {
